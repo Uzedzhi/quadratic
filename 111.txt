@@ -1,0 +1,4 @@
+a b c exp_nroots exp_x1 exp_x2
+0  0  0  3  NAN  NAN
+0  3  6  1   -1  NAN
+1 -5  6  2    2    3

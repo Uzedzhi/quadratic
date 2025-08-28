@@ -86,14 +86,14 @@ void unitest_solve_quadratic(char * file_name) {
     char tests[BUFFER_SIZE] = {}; // initializing buffer
     sassert(tests != NULL, "Error initializing buffer");
     char *curr_test = tests;
+    char path[] = "..\\tests\\";
     
-    FILE* fp = fopen(file_name, "r"); // open file with tests
+    FILE* fp = fopen(strcat(path, file_name), "r"); // open file with tests
     sassert(fp != NULL, "Error when opening file %s", file_name);
     
     clear_line(fp); // remove headers
     
     from_file_to_buffer(fp, curr_test); // write tests to buffer
-    fclose(fp);
 
     test_solve_quadratic_func(curr_test);
 }
